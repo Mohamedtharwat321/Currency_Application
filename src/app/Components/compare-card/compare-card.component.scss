@@ -1,0 +1,15 @@
+.compare-card-section{
+    color: white;
+    label{
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    input,select{
+        background-color:#e3e2e2;
+    }
+    .compare-btn,input,select{
+        border-radius: 12px;
+    }
+}

@@ -1,0 +1,43 @@
+<section class="convert-card-section">
+    <form>
+  
+      <div class="d-flex row">
+        <div class="col-4">
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            class="form-control amount"
+            id="amount"
+            placeholder="1"
+          />
+        </div>
+  
+        <div class="col-8">
+          <label class="from" for="fromCurrency">From</label>
+          <app-currency-dropdown></app-currency-dropdown>
+        </div>
+      </div>
+  
+      <div class="d-flex row">
+        <div class="col-8">
+          <label>To</label>
+          <app-currency-dropdown></app-currency-dropdown>
+        </div>
+  
+        <div class="col-4">
+          <label for="amount2">Amount</label>
+          <input
+            type="number"
+            class="form-control amount"
+            id="amount2"
+            placeholder="1"
+          />
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary w-100 fw-medium convert-btn">
+        Convert
+      </button>
+    </form>
+  </section>
+  

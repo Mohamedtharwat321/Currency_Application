@@ -1,0 +1,60 @@
+.main-page{
+    background-image:url(../assets/headerimg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+    .head-title{
+        color: white;
+        font-family: monospace;
+        text-align: center;
+    }
+    .center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mywrapper{
+        border-radius: 12px;
+        padding: 50px 40px;
+        background-color:rgba(53, 53, 53, 0.5);
+        border: 0.1px solid rgb(128, 128, 128);
+      }
+
+    .taps{
+        display: inline-block;
+        background-color: #e3e2e2;
+        border-radius: 100px;
+        font-weight: 500;
+        padding: 4px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .tabs-btns {
+        display: flex;
+        justify-content: space-between;
+      }
+      .convert-btn,.compare-btn{
+        all: unset;
+        cursor: pointer;
+        border-radius: 100px;
+      }
+      .convert-btn{
+        padding: 8px 45px;
+      }
+      .compare-btn {
+        padding: 8px 16px;
+      }
+      button.active{
+        background-color: #adadad;
+      }
+      .fadeInOut {
+        transition: opacity 1000ms;
+      }
+      button{
+        transition: 0.3s ease-in-out; 
+      }
+}
+
+
