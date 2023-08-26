@@ -12,13 +12,32 @@ import { CompareCardComponent } from './Components/compare-card/compare-card.com
 import {HttpClientModule} from '@angular/common/http';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+import { CurrencyComponent } from './Components/currency/currency.component';
+import { LiveExecComponent } from './Components/live-exec/live-exec.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import {MatCardModule} from '@angular/material/card';
+import { FavCurrComponent } from './Components/fav-curr/fav-curr.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopupComponent } from './Components/popup/popup.component';
+import { PopupCardComponent } from './Components/popup/popup-card/popup-card/popup-card.component';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ConvertCardComponent,
     ConvertCardComponent,
     CurrencyDropdownComponent,
-    CompareCardComponent
+    CompareCardComponent,
+    CurrencyComponent,
+    LiveExecComponent,
+    FavCurrComponent,
+    PopupComponent,
+    PopupCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +47,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     NgSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatDialogModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
