@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map} from 'rxjs';
+import { map, Observable} from 'rxjs';
+import { Currency } from '../interfaces/Icurruncey';
 
 @Injectable({
   providedIn: 'root',
@@ -8,10 +9,7 @@ import { map} from 'rxjs';
 export class GetcurrencyService {
   constructor(private http: HttpClient) {}
 
-  public getCurrency() {
-    let myCurrency = this.http.get('https://api.currencyfreaks.com/v2.0/supported-currencies').pipe(map((res: any) => {
-      return Object.values(res.supportedCurrenciesMap).filter(v => v)
-    }));
-    return myCurrency;
+  public getCurrency() : Observable<Currency[]> {
+    return this.http.get<Currency[]>('https://api.currencyfreaks.com/v2.0/supported-currencies')
   }
 }

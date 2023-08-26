@@ -7,7 +7,8 @@
     <app-fav-curr></app-fav-curr>
   </div>
       <app-currency></app-currency>
-      <app-currency></app-currency>
-      <app-currency></app-currency>
-      <app-currency></app-currency>
+
+      <div *ngFor="let curr of currencyList">
+        <!-- <li>{{myFave}}</li> -->
+      </div>
 </div>
