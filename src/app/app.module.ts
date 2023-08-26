@@ -38,6 +38,7 @@ import { PopupCardComponent } from './Components/popup/popup-card/popup-card/pop
     FavCurrComponent,
     PopupComponent,
     PopupCardComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -51,6 +52,7 @@ import { PopupCardComponent } from './Components/popup/popup-card/popup-card/pop
     MatCardModule,
     MatDialogModule,
     MatSlideToggleModule,
+    NgSwitch
   ],
   providers: [],
   bootstrap: [AppComponent]
