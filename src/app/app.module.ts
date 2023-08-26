@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgSwitch } from '@angular/common';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ConvertCardComponent } from './Components/convert-card/convert-card.component';
 import { CurrencyDropdownComponent } from './Components/currency-dropdown/currency-dropdown.component';
