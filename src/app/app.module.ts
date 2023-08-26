@@ -12,13 +12,15 @@ import { CompareCardComponent } from './Components/compare-card/compare-card.com
 import {HttpClientModule} from '@angular/common/http';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgSwitch } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
     ConvertCardComponent,
     ConvertCardComponent,
     CurrencyDropdownComponent,
-    CompareCardComponent
+    CompareCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     NgSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
