@@ -9,56 +9,7 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 })
 export class LiveExecComponent implements OnInit{
   myFave!:any;
-    public currencyList: Currency[] = [ {
-      code: "USD",
-     name: "US Dollar",
-      flag_url: "https://images.app.goo.gl/SCEhKz395RdLUXUJ9"
-    },
-    {
-      code: "EUR",
-      name: "Euro",
-      flag_url: "https://images.app.goo.gl/NkNaQdTSG9gDVAP98"
-    },
-    {
-      code: "GBP",
-      name: "Sterling Pound",
-      flag_url: "https://images.app.goo.gl/KcZfVo8g4qSA7hLs7"
-    },
-    {
-      code: "AED",
-      name: "UAE Dirham",
-      flag_url: "https://images.app.goo.gl/YwhCFXpdL1dgHriS9"
-    },
-    {
-      code: "BHD",
-      name: "Bahrain Dinar",
-      flag_url: "https://images.app.goo.gl/Fn1bnJrYcMHgeqkAA"
-    },
-    {
-      code: "JPY",
-      name: "Japan Yen",
-      flag_url: "https://images.app.goo.gl/CYm1odeXcNdgMJck9"
-    },
-    {
-      code: "KWD",
-      name: "Kuwait Dinar",
-      flag_url: "https://images.app.goo.gl/CUyA7dP6iq7gbbc17"
-    },
-    {
-      code: "OMR",
-      name: "Oman Riyal",
-      flag_url: "https://images.app.goo.gl/KZp9EgUSyJg2fkHJ6"
-    },
-    {
-      code: "QAR",
-      name: "Qatari Riyal",
-      flag_url: "https://images.app.goo.gl/pPCMT54fkxeXrmvn9"
-    },
-    {
-      code: "SAR",
-      name: "Saudi Riyal",
-      flag_url: "https://images.app.goo.gl/qP5B9xY1yf5BY7mSA"
-    }];
+    public currencyList: Currency[] = [];
     
     constructor(
       private currencyservice: GetcurrencyService,

@@ -20,47 +20,47 @@ public currencyList: Currency[] = [ {
 {
   code: "EUR",
   name: "Euro",
-  flag_url: "https://images.app.goo.gl/NkNaQdTSG9gDVAP98"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "GBP",
   name: "Sterling Pound",
-  flag_url: "https://images.app.goo.gl/KcZfVo8g4qSA7hLs7"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "AED",
   name: "UAE Dirham",
-  flag_url: "https://images.app.goo.gl/YwhCFXpdL1dgHriS9"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "BHD",
   name: "Bahrain Dinar",
-  flag_url: "https://images.app.goo.gl/Fn1bnJrYcMHgeqkAA"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "JPY",
   name: "Japan Yen",
-  flag_url: "https://images.app.goo.gl/CYm1odeXcNdgMJck9"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "KWD",
   name: "Kuwait Dinar",
-  flag_url: "https://images.app.goo.gl/CUyA7dP6iq7gbbc17"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "OMR",
   name: "Oman Riyal",
-  flag_url: "https://images.app.goo.gl/KZp9EgUSyJg2fkHJ6"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "QAR",
   name: "Qatari Riyal",
-  flag_url: "https://images.app.goo.gl/pPCMT54fkxeXrmvn9"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 },
 {
   code: "SAR",
   name: "Saudi Riyal",
-  flag_url: "https://images.app.goo.gl/qP5B9xY1yf5BY7mSA"
+  flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
 }];
 
 ngOnInit(): void {
