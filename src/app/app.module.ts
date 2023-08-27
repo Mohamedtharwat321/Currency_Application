@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,6 +21,7 @@ import { FavCurrComponent } from './Components/fav-curr/fav-curr.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopupComponent } from './Components/popup/popup.component';
 import { PopupCardComponent } from './Components/popup/popup-card/popup-card/popup-card.component';
+import { MaterialModule } from './material/material.module';
 
 
 
@@ -52,7 +52,8 @@ import { PopupCardComponent } from './Components/popup/popup-card/popup-card/pop
     MatCardModule,
     MatDialogModule,
     MatSlideToggleModule,
-    NgSwitch
+    NgSwitch,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

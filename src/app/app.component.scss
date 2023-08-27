@@ -1,3 +1,7 @@
+*{
+  font-family: Poppins;
+
+}
 .main-page{
     background-image:url(../assets/headerimg.jpg);
     background-position: center;
@@ -8,28 +12,31 @@
         color: white;
         font-family: monospace;
         text-align: center;
+
     }
-    .center{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+
+
+    @media (min-width: 992px) {     
+      .center{
+      width: 40%;
+  } 
+}
+
     .mywrapper{
-        border-radius: 12px;
-        padding: 50px 40px;
+        border-radius: 20px;
+        padding: 45px;
         background-color:rgba(53, 53, 53, 0.5);
         border: 0.1px solid rgb(128, 128, 128);
       }
 
     .taps{
         display: inline-block;
-        background-color: #e3e2e2;
-        border-radius: 100px;
+        background-color: #f0f0f0;
+        border-radius: 20px;
         font-weight: 500;
-        padding: 4px;
+        padding: 7px;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .tabs-btns {
         display: flex;
@@ -39,15 +46,17 @@
         all: unset;
         cursor: pointer;
         border-radius: 100px;
+        
       }
       .convert-btn{
         padding: 8px 45px;
       }
       .compare-btn {
-        padding: 8px 16px;
+        padding: 8px 45px;
+        
       }
       button.active{
-        background-color: #adadad;
+        background-color: #FFF;
       }
       .fadeInOut {
         transition: opacity 1000ms;
@@ -56,5 +65,3 @@
         transition: 0.3s ease-in-out; 
       }
 }
-
-
