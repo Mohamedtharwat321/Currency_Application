@@ -62,7 +62,8 @@ export class LiveExecComponent implements OnInit{
     
     constructor(
       private currencyservice: GetcurrencyService,
-    ) {}
+    ) {
+    }
     ngOnInit(): void {
      this.myFave = localStorage.getItem('myFav')
       // this.getCurrencyList();
@@ -72,5 +73,8 @@ export class LiveExecComponent implements OnInit{
         this.currencyList = result;
         console.log(result);
       });
+    }
+    public childData($event:any):void{
+      console.log($event);
     }
 }

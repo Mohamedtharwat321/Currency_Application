@@ -1,13 +1,13 @@
 <div class="container-sm p-4">
   <div class="d-flex justify-content-between">
-    <h2 class="d-flex justify-content-between fs-3 p-2">live exchange rates</h2>
-    <div class="d-flex justify-content-between" >
-    </div>
-    
+    <h2 class="d-flex justify-content-between fs-3 p-2">live exchange rates</h2>  
     <app-fav-curr class="p-2"></app-fav-curr>
   </div>
-      <app-currency></app-currency>
-      <!-- <div *ngFor="let curr of currencyList"> -->
+  <app-currency (myData)="childData($event)"></app-currency>
+      
+</div>
+
+
+<!-- <div *ngFor="let curr of currencyList"> -->
         <!-- <li>{{myFave}}</li> -->
       <!-- </div> -->
-</div>

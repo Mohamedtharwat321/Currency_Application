@@ -71,7 +71,7 @@ export class CurrencyDropdownComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getCurrencyList();
+    // this.getCurrencyList();
 
     this.basePath = window.location.host.includes('localhost')
       ? ''

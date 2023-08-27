@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild,EventEmitter, Output } from '@angular/core';
 import { Currency } from 'src/app/interfaces/Icurruncey';
 import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 
@@ -64,8 +64,11 @@ public currencyList: Currency[] = [ {
 }];
 
 ngOnInit(): void {
+}
 
-  
+@Output() myData = new EventEmitter<string>();
+public markCheckBox():void{
+  this.myData.emit()
 }
 
   checkInputProperty() {
