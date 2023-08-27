@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./compare-card.component.scss']
 })
 export class CompareCardComponent {
-
 }
