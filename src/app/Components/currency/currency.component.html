@@ -1,8 +1,8 @@
 
-    <div class="container-sm ">
-      <div class="row row-cols-2" (click)="onSelect.emit(currency)">
+    <div class="container ">
+      <div class="d-flex"(click)="onSelect.emit(currency)">
         <div class="col">
-          <div class="d-flex border-bottom container-sm ">
+          <div class="d-flex border-bottom justify-content-between ">
             <div class=" d-flex fs-5  ">
               <img [src]="currency.flag_url" class="m-4 icon" />    
             </div>
@@ -17,3 +17,5 @@
       </div>
     </div>
   
+
+    
