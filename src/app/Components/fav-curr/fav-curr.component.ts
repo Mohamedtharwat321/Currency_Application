@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
-import { PopupComponent } from './../popup/popup.component';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ICurrency } from 'src/app/interfaces/currency.model';
 
 
 @Component({
@@ -9,14 +8,20 @@ import { PopupComponent } from './../popup/popup.component';
   styleUrls: ['./fav-curr.component.scss']
 })
 export class FavCurrComponent {
- @Output() close$ = new EventEmitter<boolean>()
- isShown!:boolean;
-  constructor(private dialogRef : MatDialog){}
-  onDialog() : void {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.position = { top: '3rem', right: '3rem' };
-    dialogConfig.width= '400px'
-    dialogConfig.height= '600px'
-    const dialogRef = this.dialogRef.open(PopupComponent, dialogConfig);
+  @Output() onSelect = new EventEmitter<ICurrency>();
+  @Input() currencies: ICurrency[] = [];
+  isShown!: boolean;
+  // constructor(private dialogRef : MatDialog){}
+  // onDialog() : void {
+  //   const dialogConfig = new MatDialogConfig();
+  //   dialogConfig.position = { top: '3rem', right: '3rem' };
+  //   dialogConfig.width= '400px'
+  //   dialogConfig.height= '600px'
+  //   const dialogRef = this.dialogRef.open(PopupComponent, dialogConfig);
+  // }
+
+  getSelectedCurrency(currency:ICurrency){
+    console.log(currency)
   }
+
 }

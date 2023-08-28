@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { Currency } from 'src/app/interfaces/Icurruncey';
+import { ICurrency } from 'src/app/interfaces/currency.model';
 import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 @Component({
   selector: 'app-currency',
@@ -8,9 +8,9 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 })
 export class CurrencyComponent implements OnInit{
   myFave!:any;
-  @Input() currency!:Currency;
+  @Input() currency!:ICurrency;
   @Input() isCheckbox:boolean = false;
-  @Output() onSelect:EventEmitter<Currency>= new EventEmitter();
+  @Output() onSelect:EventEmitter<ICurrency>= new EventEmitter();
   // public currencyList: Currency[] = [ {
   //   code: "USD",
   //  name: "US Dollar",

@@ -11,7 +11,7 @@
                 <div class="cur">{{currency.name}}</div>
               </div>
             <div *ngIf="!isCheckbox" class="d-flex fs-5 align-items-center fw-bold">$30.3</div>
-            <input *ngIf="isCheckbox" type="checkbox">
+            <input *ngIf="isCheckbox" [(ngModel)]="currency.selected" [name]="currency.code" type="checkbox">
           </div>
         </div>
       </div>

@@ -1,6 +1,17 @@
-<button class="icon" mat-button (click)="isShown = !isShown">
-  <img src="../../assets/plus.png" class="ico" />
-  Add To Favourites
-</button>
 
-<div *ngIf="isShown">show</div>
+<div class="container-sm">
+  <button class="icon" mat-button (click)="isShown = !isShown">
+    <img src="../../assets/plus.png" class="ico" />
+    Add To Favourites
+  </button>
+  
+  <div *ngIf="isShown" class="card ">
+    <div class="modal-body p-2 fs-3">
+      <p>Favourites</p>
+    </div>
+    <div *ngFor="let c of currencies">
+      <app-currency [currency]="c" [isCheckbox]="true" (onSelect)="onSelect.emit($event)"></app-currency>
+    </div>
+  </div>
+
+</div>
