@@ -7,8 +7,7 @@
   </div>
     
 <div mat-dialog-content>
-        <popup-card></popup-card>
-</div>
+  <app-currency *ngFor="let c of currencyList" (onSelect)="getSelectedCurrency($event)" [currency]="c"></app-currency></div>
 <div mat-dialog-actions>
 
 </div>

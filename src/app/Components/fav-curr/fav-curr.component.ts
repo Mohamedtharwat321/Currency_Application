@@ -10,7 +10,7 @@ import { PopupComponent } from './../popup/popup.component';
 })
 export class FavCurrComponent {
  @Output() close$ = new EventEmitter<boolean>()
-
+ isShown!:boolean;
   constructor(private dialogRef : MatDialog){}
   onDialog() : void {
     const dialogConfig = new MatDialogConfig();

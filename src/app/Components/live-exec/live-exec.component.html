@@ -6,8 +6,6 @@
     
     <app-fav-curr class="p-2"></app-fav-curr>
   </div>
-      <app-currency></app-currency>
-      <!-- <div *ngFor="let curr of currencyList"> -->
-        <!-- <li>{{myFave}}</li> -->
-      <!-- </div> -->
+      <app-currency *ngFor="let c of currencyList" (onSelect)="getSelectedCurrency($event)" [currency]="c"></app-currency>
+    
 </div>

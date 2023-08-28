@@ -64,8 +64,6 @@ public currencyList: Currency[] = [ {
 }];
 
 ngOnInit(): void {
-
-  
 }
 
   checkInputProperty() {
