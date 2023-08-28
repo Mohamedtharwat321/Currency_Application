@@ -8,12 +8,11 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
   styleUrls: ['./live-exec.component.scss'],
 })
 export class LiveExecComponent implements OnInit {
-  myFave!: any;
   public currencyList: ICurrency[] = [];
   portfolio: ICurrency[] = [];
-  constructor(private currencyservice: GetcurrencyService) { }
+  constructor(private currencyservice: GetcurrencyService) {}
   ngOnInit(): void {
-    this.myFave = localStorage.getItem('myFav');
+    this.portfolio = JSON.parse(localStorage.getItem('portfolio') || '[]');
     this.getCurrencyList();
   }
   getCurrencyList() {
@@ -86,9 +85,12 @@ export class LiveExecComponent implements OnInit {
   }
 
   getSelectedCurrency(c: ICurrency) {
-console.log(c.selected)
-    if (c.selected)
-      this.portfolio.push(c)
+    if (c.selected) {
+      this.portfolio.push(c);
+    } else {
+      this.portfolio = this.portfolio.filter((el) => el.code != c.code);
+    }
 
+    localStorage.setItem('portfolio', JSON.stringify(this.portfolio));
   }
 }

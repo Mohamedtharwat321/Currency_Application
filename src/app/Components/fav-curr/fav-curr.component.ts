@@ -1,11 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ICurrency } from 'src/app/interfaces/currency.model';
 
-
 @Component({
   selector: 'app-fav-curr',
   templateUrl: './fav-curr.component.html',
-  styleUrls: ['./fav-curr.component.scss']
+  styleUrls: ['./fav-curr.component.scss'],
 })
 export class FavCurrComponent {
   @Output() onSelect = new EventEmitter<ICurrency>();
@@ -20,8 +19,7 @@ export class FavCurrComponent {
   //   const dialogRef = this.dialogRef.open(PopupComponent, dialogConfig);
   // }
 
-  getSelectedCurrency(currency:ICurrency){
-    console.log(currency)
+  getSelectedCurrency(currency: ICurrency) {
+    this.onSelect.emit(currency);
   }
-
 }
