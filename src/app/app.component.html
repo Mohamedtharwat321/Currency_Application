@@ -1,32 +1,35 @@
 
-<main class="main-page">
-  <section class="center">
+<main class="main-page mx-auto p-4 ">
+  <section class=" container-sm ">
     <h1 class="head-title">ConCurrency</h1>
 
-    <div [ngSwitch]="currentComponent" class="mywrapper">
-      <div class="taps">
-        <div class="tabs-btns">
-          <button
-            [class.active]="buttonConvertActive"
-            (click)="toggleButtons('buttonconvert')"
-            (click)="currentComponent = 'componentconvert'"
-            class="convert-btn"
-          >
-            Convert
-          </button>
-          <button
-            [class.active]="buttonCompareActive"
-            (click)="toggleButtons('buttoncompare')"
-            (click)="currentComponent = 'componentcompare'"
-            class="compare-btn"
-          >
-            Compare
-          </button>
+    <div class="container-sm center">
+      <div [ngSwitch]="currentComponent" class="mywrapper">
+        <div class="taps">
+          <div class="tabs-btns">
+            <button
+              [class.active]="buttonConvertActive"
+              (click)="toggleButtons('buttonconvert')"
+              (click)="currentComponent = 'componentconvert'"
+              class="convert-btn"
+            >
+              Convert
+            </button>
+            <button
+              [class.active]="buttonCompareActive"
+              (click)="toggleButtons('buttoncompare')"
+              (click)="currentComponent = 'componentcompare'"
+              class="compare-btn"
+            >
+              Compare
+            </button>
+          </div>
         </div>
+        <app-convert-card *ngSwitchCase="'componentconvert'"></app-convert-card>
+        <app-compare-card *ngSwitchCase="'componentcompare'"></app-compare-card>
       </div>
-      <app-convert-card *ngSwitchCase="'componentconvert'"></app-convert-card>
-      <app-compare-card *ngSwitchCase="'componentcompare'"></app-compare-card>
     </div>
+   
   </section>
   <div>
   </div>

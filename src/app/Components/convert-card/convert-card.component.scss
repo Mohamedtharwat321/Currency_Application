@@ -1,6 +1,7 @@
 .convert-card-section{
-    border-radius: 8px;
+    border-radius: 20px;
      margin: 0 auto;
+     
     div{
         margin-bottom: 12px;
     }
@@ -8,14 +9,16 @@
         color: white;
         font-size: 14px;
         font-weight: 500;
-        margin-bottom: 8px;
+        margin-bottom: 20px;
     }
     input,select{
         background-color:#e3e2e2;
         border-radius: 12px;
     }
     .convert-btn{
-        border-radius: 12px;
+        border-radius: 20px;
+        height: 50px;
+        font-weight: 600;
     }
     
 }
