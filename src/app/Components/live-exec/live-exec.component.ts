@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Currency } from 'src/app/interfaces/Icurruncey';
+import { ICurrency } from 'src/app/interfaces/currency.model';
 import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 
 @Component({
@@ -9,9 +9,9 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 })
 export class LiveExecComponent implements OnInit {
   myFave!: any;
-  public currencyList: Currency[] = [];
-
-  constructor(private currencyservice: GetcurrencyService) {}
+  public currencyList: ICurrency[] = [];
+  portfolio: ICurrency[] = [];
+  constructor(private currencyservice: GetcurrencyService) { }
   ngOnInit(): void {
     this.myFave = localStorage.getItem('myFav');
     this.getCurrencyList();
@@ -85,7 +85,10 @@ export class LiveExecComponent implements OnInit {
     // });
   }
 
-  getSelectedCurrency(c:Currency){
-    console.log(c);
+  getSelectedCurrency(c: ICurrency) {
+console.log(c.selected)
+    if (c.selected)
+      this.portfolio.push(c)
+
   }
 }

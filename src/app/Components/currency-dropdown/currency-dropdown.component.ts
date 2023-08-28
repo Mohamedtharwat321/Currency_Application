@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Currency } from 'src/app/interfaces/Icurruncey';
+import { ICurrency } from 'src/app/interfaces/currency.model';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { Currency } from 'src/app/interfaces/Icurruncey';
 })
 export class CurrencyDropdownComponent implements OnInit {
   myFave!:any;
-  public currencyList: Currency[] = [ {
+  public currencyList: ICurrency[] = [ {
     code: "USD",
    name: "US Dollar",
    flag_url: "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
