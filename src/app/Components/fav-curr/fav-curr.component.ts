@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { ICurrency } from 'src/app/interfaces/currency.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { ICurrency } from 'src/app/interfaces/currency.model';
   templateUrl: './fav-curr.component.html',
   styleUrls: ['./fav-curr.component.scss'],
 })
-export class FavCurrComponent {
+export class FavCurrComponent implements OnInit{
   @Output() onSelect = new EventEmitter<ICurrency>();
   @Input() currencies: ICurrency[] = [];
   isShown!: boolean;
@@ -18,6 +18,10 @@ export class FavCurrComponent {
   //   dialogConfig.height= '600px'
   //   const dialogRef = this.dialogRef.open(PopupComponent, dialogConfig);
   // }
+
+  ngOnInit(): void {
+    console.log(this.currencies);
+  }
 
   getSelectedCurrency(currency: ICurrency) {
     this.onSelect.emit(currency);

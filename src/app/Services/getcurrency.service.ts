@@ -7,7 +7,8 @@ import { ICurrency } from '../interfaces/currency.model';
   providedIn: 'root',
 })
 export class GetcurrencyService {
-  private compareUrl='https://compare-test-production.up.railway.app/pair/USD/EGP/2'
+  private compareUrl='https://compare-test-production.up.railway.app/pair/USD/EGP/2';
+  currencies:ICurrency[] =[];
   constructor(private http: HttpClient) {}
 
   public getCurrency(): Observable<ICurrency[]> {
