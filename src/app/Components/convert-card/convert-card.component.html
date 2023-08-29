@@ -5,7 +5,8 @@
         <div class="col-4">
           <label for="amount">Amount</label>
           <input
-            type="number"
+            type="text"
+            pattern="\d{1,5}"  
             class="form-control amount"
             id="amount"
             placeholder="1"
@@ -27,6 +28,7 @@
         <div class="col-4">
           <label for="amount2">Amount</label>
           <input
+          readonly="readonly"
             type="number"
             class="form-control amount"
             id="amount2"

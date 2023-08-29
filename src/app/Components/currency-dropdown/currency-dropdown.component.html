@@ -5,7 +5,7 @@
                 <ng-select appearance="outline" [searchable]="false" [clearable]="false" labelForId="heroId" formControlName="heroId">
                     <ng-option  value="country" *ngFor="let curr of currencyList">
                         <img [src]="curr.flag_url" class="m-2 icon" width="24px" height="16px"/>
-                         <span class="ms-2">{{curr.name}}</span>
+                         <span class="ms-2">{{curr.code}}</span>
                     </ng-option>
                 </ng-select>
             </div>
