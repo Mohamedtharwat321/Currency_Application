@@ -4,10 +4,17 @@
     <img src="../../assets/plus.png" class="ico" />
     Add To Favourites
   </button>
+<<<<<<< Updated upstream
   
   <div *ngIf="isShown" class="card ">
     <div class="modal-body p-2 fs-3">
       <p>Favourites</p>
+=======
+
+  <div *ngIf="isShown" class="card p-4 rounded-5">
+    <div class="modal-body p-2 fs-5">
+      <p>My Favourites</p>
+>>>>>>> Stashed changes
     </div>
     <div *ngFor="let c of currencies">
       <app-currency [currency]="c" [isCheckbox]="true" (onSelect)="onSelect.emit($event)"></app-currency>
