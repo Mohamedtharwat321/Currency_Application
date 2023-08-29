@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-
     <div class="container ">
       <div class="d-flex"(click)="onSelect.emit(currency)">
         <div class="col">
@@ -15,29 +13,6 @@
             <input *ngIf="isCheckbox" [(ngModel)]="currency.selected" [name]="currency.code" type="checkbox">
           </div>
         </div>
-=======
-<div class="container">
-  <div class="d-flex">
-    <div class="col">
-      <div  *ngFor="let curr of currencyList" class="d-flex border-bottom justify-content-between">
-        <div class="d-flex fs-5">
-          <img [src]="curr.flag_url" class="m-4 icon rounded-4 w-50"/>
-        </div>
-        <div class="flex-grow-1 align-text-bottom fs-6 p-4">
-          <div class="fs-6">{{ curr.code }}</div>
-          <div class="cur">{{ curr.name }}</div>
-        </div>
-        <div *ngIf="!isCheckbox" class="d-flex fs-5 align-items-center fw-bold">
-          $30.3
-        </div>
-        <input
-          *ngIf="isCheckbox"
-          (change)="onSelect.emit()"
-          [(ngModel)]="currency.selected"
-          [name]="currency.code"
-          type="checkbox"
-        />
->>>>>>> Stashed changes
       </div>
     </div>
   
