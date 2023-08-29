@@ -8,7 +8,9 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 })
 export class CompareCardComponent {
   @ViewChild('currInput') currInput:any;
-  res!: number;
+  res1!: number;
+  res2!: number;
+
   // fromCurrency: any;
   // toCurrency: any;
   // amount: any;
@@ -23,8 +25,9 @@ export class CompareCardComponent {
 
 
     this.getcurrencyService.compareCurrency(fromCurr, tarOne, tarTwo, inputValue).subscribe((res) => {
-     this.res=res.conversion_rate;
-     
+     this.res1=res.conversion_rate;
+     this.res2=res.conversion_rate;
+
     })
 
   }
