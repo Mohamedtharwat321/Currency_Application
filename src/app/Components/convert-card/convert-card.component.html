@@ -5,6 +5,7 @@
         <div class="col-4">
           <label for="amount">Amount</label>
           <input
+          #currInput
             type="text"
             pattern="\d{1,5}"  
             class="form-control amount"
@@ -15,14 +16,14 @@
   
         <div class="col-8">
           <label class="from" for="fromCurrency">From</label>
-          <app-currency-dropdown></app-currency-dropdown>
+          <app-currency-dropdown [from]="true"></app-currency-dropdown>
         </div>
       </div>
   
       <div class="d-flex row">
         <div class="col-8">
           <label>To</label>
-          <app-currency-dropdown></app-currency-dropdown>
+          <app-currency-dropdown [to]="true"></app-currency-dropdown>
         </div>
   
         <div class="col-4">
@@ -33,11 +34,12 @@
             class="form-control amount"
             id="amount2"
             placeholder="1"
+            [value]='res'
           />
         </div>
       </div>
   
-      <button type="submit" class="btn py-2 w-100 fw-medium convert-btn">
+      <button (click)="onConvert()" type="submit" class="btn py-2 w-100 fw-medium convert-btn">
         Convert
       </button>
     </form>

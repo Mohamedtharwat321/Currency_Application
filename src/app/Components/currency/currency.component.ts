@@ -12,6 +12,8 @@ export class CurrencyComponent implements OnInit {
   @Input() currency!: ICurrency;
   @Input() isCheckbox: boolean = false;
   @Output() onSelect: EventEmitter<ICurrency> = new EventEmitter();
+  @Input()from=false;
+  @Input()to=false;
 
 
   constructor(private currencyservice: GetcurrencyService) {}

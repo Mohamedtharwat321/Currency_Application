@@ -1,20 +1,29 @@
-<div class="container-sm">
+<div class="container-sm ">
   <button class="icon" mat-button (click)="isShown = !isShown">
     <img src="../../assets/plus.png" class="ico" />
     Add To Favourites
   </button>
 
-  <div *ngIf="isShown" class="card p-4 rounded-5">
-    <div class="modal-body p-2 fs-5">
-      <p>My Favourites</p>
+  <div *ngIf="isShown" class="card p-4 rounded-5 d">
+    <div class="p-2 fs-5 d-flex ">
+      <div class="col justify-content-between">
+        <h5>My Favourites</h5>
+        <div>
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+
+    </div>
+    <div class="cont">
+      <div *ngFor="let c of currencies; let i = index">
+        <app-currency 
+          [currency]="c"
+          [isCheckbox]="true"
+          (onSelect)="getSelectedCurrency(c)"
+        ></app-currency>
     </div>
     
-    <div *ngFor="let c of currencies; let i = index">
-      <app-currency
-        [currency]="c"
-        [isCheckbox]="true"
-        (onSelect)="getSelectedCurrency(c)"
-      ></app-currency>
+    
     </div>
   </div>
 </div>

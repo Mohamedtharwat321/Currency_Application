@@ -2,8 +2,8 @@
     <form [formGroup]="heroForm" novalidate>
         <div>
             <div class="form-group">
-                <ng-select appearance="outline" [searchable]="false" [clearable]="false" labelForId="heroId" formControlName="heroId">
-                    <ng-option  value="country" *ngFor="let curr of currencyList">
+                <ng-select (change)="changeFn($event)" appearance="outline" [searchable]="false" [clearable]="false" labelForId="heroId" formControlName="heroId">
+                    <ng-option  value="country" *ngFor="let curr of currencyList"  [value]="curr.code">
                         <img [src]="curr.flag_url" class="m-2 icon" width="24px" height="16px"/>
                          <span class="ms-2">{{curr.code}}</span>
                     </ng-option>

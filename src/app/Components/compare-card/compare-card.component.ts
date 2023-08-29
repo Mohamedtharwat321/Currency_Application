@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
-import { ICurrency } from 'src/app/interfaces/currency.model';
 
 @Component({
   selector: 'app-compare-card',
@@ -8,27 +7,26 @@ import { ICurrency } from 'src/app/interfaces/currency.model';
   styleUrls: ['./compare-card.component.scss'],
 })
 export class CompareCardComponent {
-
+  @ViewChild('currInput') currInput:any;
+  res!: number;
   // fromCurrency: any;
   // toCurrency: any;
   // amount: any;
   // convertionRates: any;
 
-  constructor(private compareService: GetcurrencyService) {}
+  constructor(private getcurrencyService: GetcurrencyService) {}
+  onCompare() {
+    const inputValue= this.currInput.nativeElement.value;
+    const fromCurr= localStorage.getItem('from')
+    const tarOne= localStorage.getItem('tarOne')
+    const tarTwo= localStorage.getItem('tarTwo')
 
-  // convertCurrency() {
-  //   if (!this.fromCurrency || !this.toCurrency || !this.amount) {
-  //     return;
-  //   }
-  //   this.compareService
-  //     .compareCurrency(
-  //       this.fromCurrency,
-  //       this.toCurrency,
-  //       this.amount,
-  //       this.convertionRates
-  //     )
-  //     .subscribe((response) => {
-  //       this.x = response.conversionRates;
-  //     });
-  // }
+
+    this.getcurrencyService.compareCurrency(fromCurr, tarOne, tarTwo, inputValue).subscribe((res) => {
+     this.res=res.conversion_rate;
+     
+    })
+
+  }
+
 }

@@ -7,18 +7,23 @@ import { ICurrency } from '../interfaces/currency.model';
   providedIn: 'root',
 })
 export class GetcurrencyService {
-  private compareUrl='https://compare-test-production.up.railway.app/pair/USD/EGP/2';
-  currencies:ICurrency[] =[];
-  constructor(private http: HttpClient) {}
+  private compareUrl = 'https://compare-test-production.up.railway.app/pair/USD/EGP/2';
+  currencies: ICurrency[] = [];
+  constructor(private http: HttpClient) {
+  }
 
   public getCurrency(): Observable<ICurrency[]> {
     return this.http.get<ICurrency[]>(
       'https://mocki.io/v1/58d53648-9753-4e03-894f-30e0ba0395c1'
-    );  
+    );
   }
 
-  compareCurrency(source: string, target: string, amount: number , convRate: number): Observable<any> {
-    const params = { source, target, amount, convRate};
-    return this.http.get(this.compareUrl, { params });
+  covertCurrency(source: any, target: any, amount: any): Observable<any> {
+    return this.http.get(`https://compare-test-production.up.railway.app/pair/${source}/${target}/${amount}`);
+
+  }
+  compareCurrency(from: any, tarOne: any, tarTwo: any, amount: any): Observable<any> {
+    return this.http.get(`https://finalv99compare-production.up.railway.app/compare/${from}/${tarOne},${tarTwo}/${amount}`);
+
   }
 }
