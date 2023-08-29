@@ -7,6 +7,7 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
   templateUrl: './live-exec.component.html',
   styleUrls: ['./live-exec.component.scss'],
 })
+
 export class LiveExecComponent implements OnInit {
   @Input() currencyList: ICurrency[] = [];
   portfolio: ICurrency[] = [];
