@@ -8,28 +8,6 @@
     color: white;
     text-align: center;
   }
-
-  @media (min-width: 992px) {
-
-    .center {
-      width: 30rem;
-    }
-  }
-  @media (max-width:600px){
-    main{
-      padding: 0 !important;
-      background-color: red;
-    }
-    .container-sm{
-      --bs-gutter-x: 0.5rem !important;
-    }
-    .main-page{
-      padding: 0px !important;
-    }
-
-  }
-
-
   .mywrapper {
     border-radius: 20px;
     padding: 45px;
@@ -71,4 +49,33 @@
   .button {
     transition: 0.3s ease-in-out;
   }
+}
+
+@media (min-width: 992px) {
+
+  .center {
+    width: 30rem;
+}
+}
+@media (max-width:600px){
+  svg{
+    margin-top: 30px;
+  }
+  main{
+    padding: 0 !important;
+  }
+  .container-sm{
+    --bs-gutter-x: 0rem !important;
+  }
+  .main-page{
+    padding: 10px !important;
+  }
+  .mywrapper{
+    padding: 20px 12px !important;
+  }
+  .convert-btn,
+  .compare-btn{
+    padding: 8px 10px !important;
+}
+
 }

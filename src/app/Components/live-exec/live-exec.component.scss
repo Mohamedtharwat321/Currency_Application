@@ -16,3 +16,12 @@
 .ico{
 	width: 24px;
 }
+@media (max-width:768px){
+	.fav-box{
+		flex-direction: column;
+	}
+	.fav-text{
+		width: 100% !important;
+		text-align: center !important;
+	}
+}

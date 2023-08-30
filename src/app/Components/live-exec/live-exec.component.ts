@@ -20,6 +20,8 @@ export class LiveExecComponent implements OnInit {
 
   getSelectedCurrency(c: ICurrency) {
     if (c.selected) {
+      console.log(this.portfolio.indexOf(c));
+      
         this.portfolio.push(c);
     } else {
       this.portfolio = this.portfolio.filter((el) => el.code != c.code);
