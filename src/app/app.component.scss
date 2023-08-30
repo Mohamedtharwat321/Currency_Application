@@ -10,10 +10,25 @@
   }
 
   @media (min-width: 992px) {
+
     .center {
-      width: 40%;
+      width: 30rem;
     }
   }
+  @media (max-width:600px){
+    main{
+      padding: 0 !important;
+      background-color: red;
+    }
+    .container-sm{
+      --bs-gutter-x: 0.5rem !important;
+    }
+    .main-page{
+      padding: 0px !important;
+    }
+
+  }
+
 
   .mywrapper {
     border-radius: 20px;
@@ -42,10 +57,10 @@
     border-radius: 100px;
   }
   .convert-btn {
-    padding: 8px 45px;
+    padding: 8px 30px;
   }
   .compare-btn {
-    padding: 8px 45px;
+    padding: 8px 30px;
   }
   button.active {
     background-color: #fff;
@@ -53,7 +68,7 @@
   .fadeInOut {
     transition: opacity 1000ms;
   }
-  button {
+  .button {
     transition: 0.3s ease-in-out;
   }
 }

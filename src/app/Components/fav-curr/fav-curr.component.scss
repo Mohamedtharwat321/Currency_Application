@@ -16,32 +16,19 @@
 }
 .ico{
 	width: 24px;
+    transition:0.7s ease;
+
 }
 .card{
 	position:absolute;
 	right: 10%;	
-	max-width: 25rem; 
+	width: 23rem; 
 	background-color: rgb(247, 247, 247);
 	border: none;
 	height: 80%;
+    box-shadow: 1px 1px 80px;
+    transition:0.7s ease;
 }
 .cont{
 	overflow-y: scroll;
-}
-
-.checkbox-round {
-    width: 1.3em;
-    height: 1.3em;
-    background-color: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.checkbox-round:checked {
-    background-color: gray;
 }

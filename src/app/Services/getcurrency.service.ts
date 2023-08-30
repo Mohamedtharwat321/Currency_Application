@@ -22,6 +22,8 @@ export class GetcurrencyService {
     return this.http.get(`https://compare-test-production.up.railway.app/pair/${source}/${target}/${amount}`);
 
   }
+
+  // compare api ------
   compareCurrency(from: any, tarOne: any, tarTwo: any, amount: any): Observable<any> {
     return this.http.get(`https://finalv99compare-production.up.railway.app/compare/${from}/${tarOne},${tarTwo}/${amount}`);
 

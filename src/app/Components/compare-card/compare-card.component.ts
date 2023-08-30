@@ -8,8 +8,9 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 })
 export class CompareCardComponent {
   @ViewChild('currInput') currInput:any;
-  res1!: number;
-  res2!: number;
+  resOne!: number;
+  resTwo!: number;
+  hisham : number = 20;
 
   // fromCurrency: any;
   // toCurrency: any;
@@ -25,11 +26,21 @@ export class CompareCardComponent {
 
 
     this.getcurrencyService.compareCurrency(fromCurr, tarOne, tarTwo, inputValue).subscribe((res) => {
-     this.res1=res.conversion_rate;
-     this.res2=res.conversion_rate;
-
+     this.resOne=res.conversion_rate;
+    
     })
 
   }
+  // onCompare() {
+  //   const inputValue= this.currInput.nativeElement.value;
+  //   const fromCurr= localStorage.getItem('from')
+  //   const toCurr= localStorage.getItem('to')
+
+  //   this.getcurrencyService.covertCurrency(fromCurr, toCurr, inputValue).subscribe((res) => {
+  //    this.resOne=res.conversion_rate;
+
+  //   })
+
+  // }
 
 }

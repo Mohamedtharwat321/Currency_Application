@@ -1,17 +1,19 @@
 <div class="container-sm ">
-  <button class="icon" mat-button (click)="isShown = !isShown">
+  <button class="icon"(click)="isShown = !isShown">
     <img src="../../assets/plus.png" class="ico" />
     Add To Favourites
   </button>
 
   <div *ngIf="isShown" class="card p-4 rounded-5 d">
     <div class="p-2 fs-5 d-flex ">
-      <div class="col justify-content-between">
-        <h5>My Favourites</h5>
+      <div class="col ">
+        <div class="d-flex justify-content-between">
+          <h5>My Favourites</h5>
+          <button type="button" class="btn-close"(click)="isShown = !isShown"></button>
+        </div>
         <div>
         </div>
       </div>
-
     </div>
     <div class="cont">
       <div *ngFor="let c of currencies; let i = index">
@@ -21,8 +23,6 @@
           (onSelect)="getSelectedCurrency(c)"
         ></app-currency>
     </div>
-    
-    
     </div>
   </div>
 </div>

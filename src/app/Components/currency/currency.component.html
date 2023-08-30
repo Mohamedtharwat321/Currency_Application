@@ -1,18 +1,18 @@
     <div class="container ">
       <div class="d-flex">
         <div class="col">
-          <div class="d-flex border-bottom justify-content-between">
+          <div class="d-flex border-bottom justify-content-between align-items-center">
             <div class=" d-flex">
               <img [src]="currency.flag_url" class="my-4 icon rounded-5" />    
             </div>
-            <div class="flex-grow-1 align-text-bottom fs-6 pt-3 px-4">
+            <div class="flex-grow-1 align-items-center fs-6 pt-3 px-4">
               <div class="fs-5">{{ currency.code }}</div>
               <div class="cur">{{ currency.name }}</div>
             </div>
             <div *ngIf="!isCheckbox" class="d-flex fs-5 align-items-center fw-bold">$30.3</div>
             <div>
               <input
-              class="checkbox-round"
+              class="checkbox-round "
                 *ngIf="isCheckbox"
                 (change)="onSelect.emit()"
                 [(ngModel)]="currency.selected"
