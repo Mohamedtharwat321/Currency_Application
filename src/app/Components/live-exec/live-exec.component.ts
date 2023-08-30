@@ -11,7 +11,8 @@ import { GetcurrencyService } from 'src/app/Services/getcurrency.service';
 export class LiveExecComponent implements OnInit {
   @Input() currencyList: ICurrency[] = [];
   portfolio: ICurrency[] = [];
-  constructor(private currencyservice: GetcurrencyService) {}
+  valueRate: number = 0;
+  constructor(private currencyservice: GetcurrencyService) { }
   ngOnInit(): void {
     this.portfolio = JSON.parse(localStorage.getItem('portfolio') || '[]');
     console.log(this.currencyList);
@@ -20,6 +21,12 @@ export class LiveExecComponent implements OnInit {
 
   getSelectedCurrency(c: ICurrency) {
     if (c.selected) {
+      const from = localStorage.getItem('from')
+      this.currencyservice.getFav(from, c.code).subscribe((res) => {
+        this.valueRate = res.conversion_rate
+
+      })
+
       this.portfolio.push(c);
     } else {
       this.portfolio = this.portfolio.filter((el) => el.code != c.code);

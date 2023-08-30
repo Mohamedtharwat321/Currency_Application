@@ -20,13 +20,14 @@ export class CompareCardComponent {
   constructor(private getcurrencyService: GetcurrencyService) {}
   onCompare() {
     const inputValue= this.currInput.nativeElement.value;
-    const fromCurr= localStorage.getItem('from')
+    const fromCurr= localStorage.getItem('fromCurr')
     const tarOne= localStorage.getItem('tarOne')
     const tarTwo= localStorage.getItem('tarTwo')
 
 
     this.getcurrencyService.compareCurrency(fromCurr, tarOne, tarTwo, inputValue).subscribe((res) => {
-     this.resOne=res.conversion_rate;
+     this.resOne=res[0].conversion_rate;
+     this.resTwo=res[1].conversion_rate;
     
     })
 

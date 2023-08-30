@@ -12,6 +12,7 @@ export class CurrencyComponent implements OnInit {
   @Input() currency!: ICurrency;
   @Input() isCheckbox: boolean = false;
   @Output() onSelect: EventEmitter<ICurrency> = new EventEmitter();
+  @Input()vauleRate!:number;
   @Input()from=false;
   @Input()to=false;
 

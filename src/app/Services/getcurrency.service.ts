@@ -28,4 +28,11 @@ export class GetcurrencyService {
     return this.http.get(`https://finalv99compare-production.up.railway.app/compare/${from}/${tarOne},${tarTwo}/${amount}`);
 
   }
+
+ 
+    // fav api ------
+    getFav(from: any, target: any): Observable<any> {
+      return this.http.get(`https://compare-test-production.up.railway.app/pair/${from}/${target}/1`);
+  
+    }
 }

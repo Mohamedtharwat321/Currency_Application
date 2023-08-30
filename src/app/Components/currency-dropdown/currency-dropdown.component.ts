@@ -44,6 +44,9 @@ export class CurrencyDropdownComponent implements OnInit {
     if(this.from){
       localStorage.setItem('from',val);
     }
+    if (this.to) {
+      localStorage.setItem('to',val);
+    }
     if (this.fromCurr) {
       localStorage.setItem('fromCurr',val);
     }
