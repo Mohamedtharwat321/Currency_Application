@@ -6,13 +6,11 @@ import { ICurrency } from 'src/app/interfaces/currency.model';
   templateUrl: './fav-curr.component.html',
   styleUrls: ['./fav-curr.component.scss'],
 })
-export class FavCurrComponent implements OnInit{
+export class FavCurrComponent {
   @Output() onSelect = new EventEmitter<ICurrency>();
   @Input() currencies: ICurrency[] = [];
   isShown!: boolean;
-  ngOnInit(): void {
-    console.log(this.currencies);
-  }
+ 
 
   getSelectedCurrency(currency: ICurrency) {
     this.onSelect.emit(currency);

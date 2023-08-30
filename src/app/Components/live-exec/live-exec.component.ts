@@ -14,20 +14,13 @@ export class LiveExecComponent implements OnInit {
   valueRate: number = 0;
   constructor(private currencyservice: GetcurrencyService) { }
   ngOnInit(): void {
-    this.portfolio = JSON.parse(localStorage.getItem('portfolio') || '[]');
-    console.log(this.currencyList);
+    this.portfolio = JSON.parse(localStorage.getItem('portfolio') || '[]')
   }
 
 
   getSelectedCurrency(c: ICurrency) {
     if (c.selected) {
-      const from = localStorage.getItem('from')
-      this.currencyservice.getFav(from, c.code).subscribe((res) => {
-        this.valueRate = res.conversion_rate
-
-      })
-
-      this.portfolio.push(c);
+        this.portfolio.push(c);
     } else {
       this.portfolio = this.portfolio.filter((el) => el.code != c.code);
     }
